@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class = "section1">
+            <div class="menu">
+                <ul>
+                    <li class = "name"><span class="icon"></span></li>
+                    <hr>
+                    <li class = "dashboard"><i class="fa-solid fa-layer-group"></i>Dashboard</li>
+                    <li><i class="fa-solid fa-user-group" id="studentBtn"></i>Students</li>
+                    <li><i class="fa-solid fa-chalkboard-user" id="instructorBtn"></i>instructors</li>
+                    <li><i class="fa-solid fa-clipboard-user" id="coordinatorBtn"></i>coordinator</li>
+                    <li><i class="fa-solid fa-laptop" id="programBtn"></i>Progrms</li>
+                    <li><i class="fa-solid fa-school" id="aiuBtn"></i>AIU Courses</li>
+                    <li><i class="fa-solid fa-graduation-cap" id="courseraBtn"></i>Coursera Courses</li>
+                    <li><i class="fa-solid fa-ticket" id="licenceBtn"></i>Licences</li>
+                    <li><i class="fa-solid fa-clipboard-question"></i>Queries</li>
+                </ul>
+            </div>
+        </section>
+        <section class = "section2">
+            <div class="search">
+                <input type="text" placeholder="Search" >
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+            <h1 class="statistics">Statistics</h1>
+            <div class="subjects">
+                <div class="st  box">
+                    <span class = "icon" ><i class="fa-solid fa-user-group fa-2xl"></i></span>
+                    <h3 class = title>Students Enrolled</h3>
+                    <h2 class="countup" >1200</h2>
+    
+                </div>
+                <div class="fu  box">
+                    <span class = "icon"><i class="fa-solid fa-chalkboard-user fa-2xl"></i></span>
+                    <h3 class = title>Faculty Members</h3>
+                    <h2 class="countup" >120</h2>
+                    
+                </div>
+                <div class="pr  box">
+                    <span class = "icon" ><i class="fa-solid fa-laptop fa-2xl"></i></span>
+                    <h3 class = title>Programs</h3>
+                    <h2 class="countup" >10</h2>
+                    
+                </div>
+                <div class="cg  box">
+                    <span class = "icon" ><i class="fa-solid fa-school fa-2xl"></i></span>
+                    <h3 class = title>AIU Courses</h3>
+                    <h2 class="countup" >55</h2>
+                    
+                </div>
+                <div class="co  box">
+                    <span class = "icon"><i class="fa-solid fa-graduation-cap fa-2xl"></i></span>
+                    <h3 class = title>Coursera Courses</h3>
+    
+                    <h2 class="countup" >190</h2>
+                    
+                </div>
+            </div>
+
+
+            <div class="tables">
+                <div class = "main panel">
+                    <h2>Welcome to our   <span>DBMS</span></h2>
+                </div>
+                <div class="student panel" id="includeHtml"></div>
+                <div class="instructor panel" id="includeHtml1"></div>
+                <div class="program panel" id="includeHtml2"></div>
+                <div class="licence panel" id="includeHtml3"></div>
+                <div class="coursera panel" id="includeHtml4"></div>
+                <div class="aiu panel" id="includeHtml5"></div>
+                <div class="coordinator panel" id="includeHtml6"></div>
+            </div>
+        </section>
+
+
+
+
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+       $(function() {
+            $("#includeHtml").load("/student");
+            $("#includeHtml1").load("/instructor");
+            $("#includeHtml2").load("/program");
+            $("#includeHtml3").load("/license");
+            $("#includeHtml4").load("/coursera");
+            $("#includeHtml5").load("/aiu");
+            $("#includeHtml6").load("/coordinator");
+       });
+
+    </script>
+    <script src="{{ url_for('static', filename='panelSwitcher.js') }}"></script>
+
+</body>
+</html>

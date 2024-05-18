@@ -1,0 +1,442 @@
+
+*{
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal ;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.container {
+    display: flex;
+
+}
+
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: fit-content;
+    padding: 12px;
+    background-color: #212121;
+    margin: 16px;
+    border-radius: 16px;
+    height: 92vh;
+
+}
+.menu li{
+    list-style: none;
+    text-align: start;
+    margin: 20px 5px;
+    background-color: antiquewhite;
+    width: 160px;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #212121;
+
+}
+.menu li i {
+    width: 15px;
+    margin: 13px 14px;
+    color: red;
+}
+
+.menu li:hover{
+    i {
+        color: black !important;
+        transition: .5s;
+    }
+}
+
+
+
+.menu .dashboard:hover{
+    i {
+        color: red !important;
+        transition: .5s;
+    }
+}
+
+
+.dashboard{
+    cursor:default !important;
+    margin-top: 30px !important;
+    background-color: #212121 !important;
+    color: white !important;
+    height: 50px;
+}
+
+
+.name{
+    cursor:default !important;
+    background-color: transparent !important;
+    color: white;
+    padding-bottom: 24px;
+
+}
+
+
+.name .icon {
+    background-image: url('AIU_New_Logo.png');
+    background-size: cover;
+    background-position: start;
+    padding:10px 65px;
+    margin-left: 30px;
+  }
+  
+
+
+
+
+.search{
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 12px;
+
+}
+.search input{
+    width: 40%;
+    margin: auto;
+    border-radius: 12px;
+    height: 35px;
+    font-size: 18px;
+
+}
+.search input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+.search button{
+    border: none;
+    background-color: transparent;
+    color: red;
+    z-index: 3;
+    position: fixed;
+    right: 400px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.search input{
+position: fixed;
+}
+
+.section2{
+    margin-top: -20px;
+}
+
+
+.subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 12px;
+    margin-left: 70px;
+}
+.statistics{
+    margin-left:15px;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.box {
+
+    padding: 12px;
+    height: 60px;
+    width: 180px;
+    border-radius: 8px;
+    min-width: 140px;
+    background-color:#d62828;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    margin: 12px;
+    box-shadow: 0 10px 30px rosybrown;
+    color: wheat;
+
+}
+
+.box > .icon {
+    grid-row: 1 / span 3; 
+    border-right: solid wheat 2px;
+}
+
+.box > .title {
+    grid-row: 1; 
+}
+
+.countup {
+    grid-row: 2 / span 2; 
+}
+
+.box > .icon {
+    padding-right: 12px;
+    width: 40px;
+}
+
+.box .icon i {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.box h3 {
+    font-size: 14px;
+}
+
+.box:hover {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .4); 
+    transition: box-shadow .5s ease; 
+}
+
+
+
+.tables{
+    background-color: white;
+    width : 1200px;
+    margin-top: 40px;
+    table-layout: fixed;
+    padding: 20px 40px;
+    color: #212121;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 2px;
+
+}
+
+.tbl-header {
+    background-color: #d62828;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.tbl-content {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid rgba(214, 40, 40, 0);
+    border-radius: 0px 0px 12px 12px;
+}
+th {
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: wheat;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 15px;
+    color: #212121;
+    border-bottom: solid 1px rgba(214, 40, 40, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pptoggler , .Licencee , .instructorr , .studente  , .aiutog , .courseratog , coordinatorr{
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1%;
+    margin-top: 12px;
+}
+
+.pptoggler  i  , .Licencee  i, .instructorr i , .studente i , .aiutog i , .courseratog i , .coordinatorr i{
+    padding-top: 12px;
+    color: #EEE;
+    border-radius: 8px;
+    background-color: #d62828;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+
+}
+
+nav {
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.9s;
+    transform: translateX(-100%);
+    background: rgba( 100, 29, 29, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+}
+
+nav.open {
+    transform: translateX(0);
+}
+
+nav .cProgram ,
+nav .cLicense ,
+nav .cinstructor ,
+nav .cStudent ,
+nav .aiuc ,
+nav .courserac ,
+nav .ccoordinator{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+nav .cProgram  :hover,
+nav .cLicense :hover ,
+nav .cinstructor :hover ,
+nav .cStudent :hover ,
+nav .aiuc :hover,
+nav .courserac :hover,
+nav .ccoordinator :hover{
+    color: red;
+    border-color: red;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"],
+form input[type = "url"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #d62828;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: red;
+}
+
+
+.tbl-content::-webkit-scrollbar {
+    width: 4px;
+    padding: 2px;
+}
+
+.tbl-content::-webkit-scrollbar-track {
+    background: transparent; /* Track color */
+}
+
+.tbl-content::-webkit-scrollbar-thumb {
+    background-color: #d62828; /* Thumb color */
+    border-radius: 12px; /* Rounded corners for thumb */
+}
+
+.tables .main{
+    margin-top: 50px;
+    font-size: 45px;
+    text-align: start;
+    margin-left: 16%;
+}
+
+.tables .main span{
+    display: block;
+    font-size: 40px !important;
+    color: #d62828;
+    margin-left: 35%;
+    margin-top: 30px;
+}
+
+

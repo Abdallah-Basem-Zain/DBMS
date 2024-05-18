@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>COde</th>
+            <th>Expected students</th>
+            <th>instructor</th>
+            <th>field</th>
+            <th>semester</th>
+            <th>mapping module</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          {% for row in data %}
+          <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <span class="aiutog">
+      <i class="fa-solid fa-plus"></i>
+    </span>
+  </section>
+  <nav class="aiuNav">
+    <span class="aiuc">X</span>
+    <div id="FormContainer">
+      <form id="aiu" action="{{ url_for('aiu_bp.add_aiu') }}" method="post">
+        <label for="course_code">Course Code:</label>
+        <input type="text" id="course_code" name="course_code" required><br>
+
+        <label for="No_expected">Number Of Expected Students:</label>
+        <input type="text" id="No_expected" name="No_expected" required><br>
+
+        <label for="instructor">Instructor:</label>
+        <input type="text" list="instructors" id="instructor" name="instructor" >
+        <datalist id="instructors">
+            {% for instructor in instructors %}
+                <option value="{{ instructor }}"></option>
+            {% endfor %}
+        </datalist><br><br>
+
+
+        <label for="field">Field:</label>
+        <input type="text" list="fields" id="field" name="field" >
+        <datalist id="fields">
+            {% for field in fields %}
+                <option value="{{ field }}"></option>
+            {% endfor %}
+        </datalist><br><br>
+
+        <label for="semester">Semester:</label>
+        <input type="text" list="semesters" id="semester" name="semester">
+        <datalist id="semesters">
+            {% for semester in semesters %}
+                <option value="{{ semester }}"></option>
+            {% endfor %}
+        </datalist><br><br>
+
+
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </nav>
+
+
+</body>
+
+</html>
